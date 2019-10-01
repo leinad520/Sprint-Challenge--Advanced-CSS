@@ -1,1 +1,21 @@
 // Mixins Here
+.center() {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-maker(@color, @bg-color) {
+    color: @color;
+    background-color: @bg-color;
+    border: 1px solid black;
+    width: 5rem;
+    // padding: 10px 0;
+    height: 2rem;
+    border-radius: 10px;
+    .center();
+    align-items: center;
+    &:hover {
+        color: @bg-color;
+        background-color: @color;
+    }
+}
